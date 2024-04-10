@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_myPage">
+
+    <fragment
+        android:id="@+id/nav_myPage"
+        android:name="com.example.specialistsru.ui.mypage.MyPageFragment"
+        tools:layout="@layout/fragment_my_page" />
+
+    <fragment
+        android:id="@+id/nav_messages"
+        android:name="com.example.specialistsru.ui.messages.MessagesFragment"
+        tools:layout="@layout/fragment_messages" />
+    <fragment
+        android:id="@+id/nav_forums"
+        android:name="com.example.specialistsru.ui.forums.ForumsFragment"
+        tools:layout="@layout/fragment_forums" />
+
+    <fragment
+        android:id="@+id/nav_companies"
+        android:name="com.example.specialistsru.ui.companies.CompaniesFragment"
+        tools:layout="@layout/fragment_companies" />
+    <fragment
+        android:id="@+id/nav_collegues"
+        android:name="com.example.specialistsru.ui.colleagues.ColleguesFragment"
+        tools:layout="@layout/fragment_collegues" />
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.example.specialistsru.ui.news.NewsFragment"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/nav_vacansions"
+        android:name="com.example.specialistsru.ui.vacansies.VacansiesFragment"
+        tools:layout="@layout/fragment_vacansies" />
+
+</navigation>

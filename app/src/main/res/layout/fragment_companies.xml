@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ui.companies.CompaniesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/list_companies_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/search_bar_companies"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:hint="Поиск компании"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/companies_find_name_text_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Мои компании"
+            app:layout_constraintTop_toBottomOf="@id/search_bar_companies"/>
+
+        <fragment
+            android:id="@+id/companies_vertical_list_fragment"
+            android:name="com.example.specialistsru.ui.companies.CompaniesVerticalListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_companies_vertical_list"
+            app:layout_constraintTop_toBottomOf="@id/companies_find_name_text_vertical"/>
+
+        <TextView
+            android:id="@+id/companies_find_name_text_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text="Просмотренные компании"
+            app:layout_constraintTop_toBottomOf="@id/companies_vertical_list_fragment"/>
+
+        <LinearLayout
+            android:id="@+id/companies_find_name_text_horizontal_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/companies_find_name_text_horizontal">
+            <fragment
+                android:id="@+id/companies_horizontal_list_fragment"
+                android:name="com.example.specialistsru.ui.companies.CompaniesHorizontalListFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_companies_horizontal_list"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
